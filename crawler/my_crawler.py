@@ -14,7 +14,7 @@ def getHtml(url):
 	return html
 
 #url = r'http://tieba.baidu.com/p/3205263090'
-url = r'https://www.zhihu.com/question/30891697'
+url = r'https://boards.4chan.org/s/'
 dirpath='a/'
 
 proxy= {"http" : "http://127.0.0.1:1080", "https": "http://127.0.0.1:1080"}
@@ -28,7 +28,7 @@ print("requesting url:",url)
 html = getHtml(url)
 
 #generate a pattern
-reg=r'src="([.*\S]*\.jpg)"'
+reg=r'<img src="([.*\S]*\.\S\Sg)"'
 pattern = re.compile(reg)
 
 #find pattern
@@ -38,9 +38,8 @@ index=1001
 for item in imgurls:
 	if item.startswith('//'):
 		item = 'http:'+item
-	print("downloading:", item)
 	
-	filename = os.path.join(dirpath, str(index)+'.jpg')
-	
+	filename = os.path.join(dirpath, str(index)+'.'+item[-3:])
+	print("download:",item,">>>",filename)
 	urllib.request.urlretrieve(item,filename)
 	index +=1
