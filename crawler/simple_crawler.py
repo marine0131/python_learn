@@ -93,10 +93,10 @@ class Crawler(object):
         'http://www.intel.com/news/'
         no_cache: function returning True if the url should be refreshed
         """
-        u_parse = urlparse(url)
-        self.domain = u_parse.netloc
+        u_parse = urlparse(url)#url parse, get scheme,netloc,path,param,query,fragment
+        self.domain = u_parse.netloc#the main website,ie:url='http://www.baidu.com/index.php?username=guol' netloc='www.baidu.com'
         self.content[self.domain] = {}
-        self.scheme = u_parse.scheme
+        self.scheme = u_parse.scheme#scheme = 'http'or'https'...
         self.no_cache = no_cache
         self._crawl([u_parse.path], self.depth)
 
@@ -115,9 +115,9 @@ class Crawler(object):
           print ("cached url... [%s] %s" % (self.domain, url))
         return page
 
-    def is_cacheable(self, url):
+    def is_cacheable(self, url):#exist a cache & exist a cache & 
         return self.cache and self.no_cache \
-            and not self.no_cache(url)
+            and not self.no_cache(url) 
 
     def _crawl(self, urls, max_depth):
         n_urls = set()

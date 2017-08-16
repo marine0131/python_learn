@@ -1,14 +1,11 @@
-package main
+import net/http
+import io/ioutil
+import regexp
+import strings
+import os
+import strconv
+import fmt
 
-import (
-    "net/http"
-    "io/ioutil"
-    "regexp"
-    "strings"
-    "os"
-    "strconv"
-    "fmt"
-)
 
 func Check(err error) {
     defer func() { err = nil }()

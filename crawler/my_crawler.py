@@ -28,7 +28,7 @@ print("requesting url:",url)
 html = getHtml(url)
 
 #generate a pattern
-reg=r'<img src="([.*\S]*\.\S\Sg)"'
+reg=r'<img src="([.*\S]*\.\S\Sg)"'#int the [] match '.'or'*'or character, follow a '*' means match 0 or more times
 pattern = re.compile(reg)
 
 #find pattern

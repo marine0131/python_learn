@@ -14,7 +14,7 @@ def getHtml(url):
 	return html
 
 #url = r'http://tieba.baidu.com/p/3205263090'
-url = r'https://www.zhihu.com/question/30891697'
+url = r'https://boards.4chan.org/s/'
 dirpath='a/'
 
 proxy= {"http" : "http://127.0.0.1:1080", "https": "http://127.0.0.1:1080"}
@@ -28,7 +28,7 @@ print("requesting url:",url)
 html = getHtml(url)
 
 #generate a pattern
-reg=r'<img src="([.*\S]*\.\S\Sg)"'
+reg=r'<img src="([.*\S]*\.\S\Sg)"'#int the [] match '.'or'*'or character, follow a '*' means match 0 or moretimes
 pattern = re.compile(reg)
 
 #find pattern

@@ -1,3 +1,6 @@
+##
+#2 empty bottle exchange a bottle, 5 shell exchange a bottle
+##
 import math
 empty=1000
 shell = 1000
@@ -9,6 +12,6 @@ while empty>=2 or shell>=4:
     delta = num(empty,shell)
     empty=empty%2+delta
     shell=shell%4+delta
-    number=number+delta
+    number+= delta
+    
 print(number)    
-
