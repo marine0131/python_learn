@@ -1,5 +1,6 @@
 this project is the process I learn python
 
-use the book "head_first_python"
-
-all the code is from the book
+1. use the book "head_first_python"
+2. on liaoxuefeng's website
+3. hardway to learn python project
+4. tools daily write for efficient lif
