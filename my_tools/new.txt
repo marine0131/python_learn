@@ -1,12 +1,1 @@
-da:    dasda
-das:   dasd
-sada   :wqeq
-hd  f   :erwq
-11   :22
-33  :44
-da:  das da
-das:  da sd
-sa  da:wqe  q
-h  df:e   rwq
-1        1:2  2
-33:4   4  
+da,das,sada,hd  f,11,33,da,das,sa  da,h  df,1        1,33,
