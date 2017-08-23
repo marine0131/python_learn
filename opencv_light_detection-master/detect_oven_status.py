@@ -1,8 +1,10 @@
+#! usr/bin/env python
 
 import os
 import argparse
 import numpy as np
 import cv2
+from bottle import route, run
 
 def create_hue_mask(image, lower_color, upper_color):
     lower = np.array(lower_color, np.uint8)
