@@ -43,7 +43,7 @@ if __name__=='__main__':
     rospy.init_node('test')
     t = TransformListener()
     # quat = transformations.quaternion_from_euler(0,0,math.pi/4)
-    quat = [0, 0, -0.73, 0.68344]
+    quat = [0, 0, 0.73, 0.68344]
     rot = TransformListener.fromTranslationRotation(t, translation=(0,0,0), rotation=(quat[0],quat[1],quat[2],quat[3]))
     a = [1,0,0,1]
     print np.dot(a,rot)[0:3] + [0.255, 0.3 ,0]
