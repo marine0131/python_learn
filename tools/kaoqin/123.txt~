@@ -1,0 +1,4 @@
+{"zh": {"new_holiday": 3, "hours": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+"new_work": 1, "total": 78}, "whj": {"total": 78, "hours": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+12], "new_holiday": 9, "new_work": 1}, "tgc": {"new_holiday": 92, "hours": [1, 2, 3, 4, 5, 6, 7, 8,
+9, 10, 11, 12], "total": 78, "new_holiday": 1}}
